@@ -1,55 +1,40 @@
 package main.java;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         Calculator calculator = new Calculator();
-        String function = args[0];
-        switch (function) {
-            case "add" -> {
-                int num1 = Integer.parseInt(args[1]);
-                int num2 = Integer.parseInt(args[2]);
-                System.out.println(calculator.add(num1, num2));
+        Scanner myScanner = new Scanner(System.in);
+        String input = myScanner.nextLine();
+        String [] inputArr = input.split(" ");
 
-                break;
-            }
-            case "subtract" -> {
-                int num1 = Integer.parseInt(args[1]);
-                int num2 = Integer.parseInt(args[2]);
-                System.out.println(calculator.subtract(num1, num2));
-
-                break;
-            }
-            case "multiply" -> {
-                int num1 = Integer.parseInt(args[1]);
-                int num2 = Integer.parseInt(args[2]);
-                System.out.println(calculator.multiply(num1, num2));
-
-                break;
-            }
-            case "divide" -> {
-                int num1 = Integer.parseInt(args[1]);
-                int num2 = Integer.parseInt(args[2]);
-                System.out.println(calculator.divide(num1, num2));
-
-                break;
-            }
-            case "fibonacci" -> {
-                int num = Integer.parseInt(args[1]);
-                System.out.println(calculator.fibonacciNumberFinder(num));
-
-                break;
-            }
-            case "binary" -> {
-                int num = Integer.parseInt(args[1]);
-                System.out.println(calculator.intToBinaryNumber(num));
-
-                break;
-            }
+        if ("add".equals(inputArr[0])) {
+            int num1 = Integer.parseInt(inputArr[1]);
+            int num2 = Integer.parseInt(inputArr[2]);
+            System.out.println(calculator.add(num1, num2));
+        } else if ("subtract".equals(inputArr[0])) {
+            int num1 = Integer.parseInt(inputArr[1]);
+            int num2 = Integer.parseInt(inputArr[2]);
+            System.out.println(calculator.subtract(num1, num2));
+        } else if ("multiply".equals(inputArr[0])) {
+            int num1 = Integer.parseInt(inputArr[1]);
+            int num2 = Integer.parseInt(inputArr[2]);
+            System.out.println(calculator.multiply(num1, num2));
+        } else if ("divide".equals(inputArr[0])) {
+            int num1 = Integer.parseInt(inputArr[1]);
+            int num2 = Integer.parseInt(inputArr[2]);
+            System.out.println(calculator.divide(num1, num2));
+        } else if ("fibonacci".equals(inputArr[0])) {
+            int num = Integer.parseInt(inputArr[1]);
+            System.out.println(calculator.fibonacciNumberFinder(num));
+        } else if ("binary".equals(inputArr[0])) {
+            int num = Integer.parseInt(inputArr[1]);
+            System.out.println(calculator.intToBinaryNumber(num));
         }
-
     }
-
 }
