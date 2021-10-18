@@ -42,6 +42,9 @@ public class Calculator {
     etc
      */
     public int fibonacciNumberFinder(int n){
+        if (n == 1) {
+            return 1;
+        }
         int num = 0, num2 = 1;
         int fibonacci = 0;
         for (int loop = 0; loop < n; loop ++)
