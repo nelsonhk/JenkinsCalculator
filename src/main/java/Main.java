@@ -1,11 +1,9 @@
 package main.java;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+class Main {
 
     public static void main(String[] args) throws IOException {
         Calculator calculator = new Calculator();
@@ -37,4 +35,5 @@ public class Main {
             System.out.println(calculator.intToBinaryNumber(num));
         }
     }
+
 }
