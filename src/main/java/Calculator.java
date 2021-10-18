@@ -4,9 +4,7 @@ import java.util.UUID;
 
 public class Calculator {
 
-    public Calculator(){
-        this will break my project !
-    }
+    public Calculator(){}
 
     public int add(int a, int b){
         return a + b;
