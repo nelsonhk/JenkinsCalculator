@@ -40,7 +40,15 @@ public class Calculator {
     etc
      */
     public int fibonacciNumberFinder(int n){
-        return 0;
+        int num = 0, num2 = 1;
+        int fibonacci = 0;
+        for (int loop = 0; loop < n; loop ++)
+        {
+            fibonacci = num + num2;
+            num = num2;
+            num2 = fibonacci;
+        }
+        return fibonacci;
     }
 
 
