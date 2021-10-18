@@ -56,24 +56,6 @@ public class CalculatorTestThorough {
     }
 
     @Test
-    public void divideByZeroFailure(){
-        Calculator myCalculator = new Calculator();
-
-        String failureMessage =  "/ by zero";
-        for(int i = 1 ; i < 100000 ; i++){
-            try{
-
-                myCalculator.divide(i, 0);
-                fail();
-            }
-            catch (ArithmeticException e){
-                assertTrue(failureMessage.contains(e.getMessage()));
-            }
-        }
-
-    }
-
-    @Test
     public void fibonacciTest(){
 
         for(int i = 0 ; i < 10000; i++){
